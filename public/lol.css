@@ -1,0 +1,61 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    overflow: hidden; /* Prevent overflow */
+}
+
+.text-3d {
+    font-size: 100px; /* Large font size for "LoLo" */
+    color: #ff5722; /* Main text color */
+    text-shadow: 
+        1px 1px 0 rgba(0,0,0,0.2),
+        2px 2px 0 rgba(0,0,0,0.2),
+        3px 3px 0 rgba(0,0,0,0.2),
+        4px 4px 0 rgba(0,0,0,0.2),
+        5px 5px 0 rgba(0,0,0,0.2); /* Creates 3D effect */
+    animation: float 3s ease-in-out infinite, rotate 2s linear infinite, color-change 5s ease-in-out infinite; /* Combined animations */
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translatey(0);
+    }
+    50% {
+        transform: translatey(-20px);
+    }
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(15deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+@keyframes color-change {
+    0% {
+        color: #ff5722; /* Initial color */
+    }
+    25% {
+        color: #2196f3; /* Blue */
+    }
+    50% {
+        color: #4caf50; /* Green */
+    }
+    75% {
+        color: #ffeb3b; /* Yellow */
+    }
+    100% {
+        color: #ff5722; /* Back to initial color */
+    }
+}
